@@ -1,0 +1,18 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Data & training artifacts
+data/
+runs_ddpm_cats/
+*.pt
+
+# Environments
+.venv/
+venv/
+.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
