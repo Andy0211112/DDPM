@@ -275,6 +275,7 @@ def train(args):
             samples = ddpm.sample(model, n=args.sample_n)
             grid = (samples + 1) / 2  # -> [0,1]
             save_path = os.path.join(args.gendir, f"sample/sample_epoch_{epoch}.png")
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
             utils.save_image(grid, save_path, nrow=int(math.sqrt(args.sample_n)))
             print(f"[Info] Saved samples to: {save_path}")
 
